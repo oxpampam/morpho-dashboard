@@ -2,6 +2,7 @@
 .env
 .env.local
 .env*.local
+# NOTE: .env.production is intentionally committed (public NEXT_PUBLIC_ vars only)
 
 # Dependencies
 node_modules/
