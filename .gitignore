@@ -1,0 +1,18 @@
+# Environment secrets
+.env
+.env.local
+.env*.local
+
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+dist/
+
+# Vercel
+.vercel
+
+# OS
+.DS_Store
+*.swp
