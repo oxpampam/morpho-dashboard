@@ -52,7 +52,7 @@ export default function Page() {
 
         <div className="flex items-center gap-4 text-[10px] text-radar-muted">
           <a
-            href="http://localhost:8080/console"
+            href="https://indexer.dev.hyperindex.xyz/7e2692d/v1/graphql"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-radar-accent transition-colors"

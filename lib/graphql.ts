@@ -1,10 +1,10 @@
 import { createClient, type Client } from "graphql-ws";
 
-const HTTP  = process.env.NEXT_PUBLIC_GRAPHQL_HTTP  ?? "http://localhost:8080/v1/graphql";
-const WS    = process.env.NEXT_PUBLIC_GRAPHQL_WS    ?? "ws://localhost:8080/v1/graphql";
-const SECRET = process.env.NEXT_PUBLIC_HASURA_SECRET ?? "testing";
+const HTTP  = process.env.NEXT_PUBLIC_GRAPHQL_HTTP  ?? "https://indexer.dev.hyperindex.xyz/7e2692d/v1/graphql";
+const WS    = process.env.NEXT_PUBLIC_GRAPHQL_WS    ?? "wss://indexer.dev.hyperindex.xyz/7e2692d/v1/graphql";
+const SECRET = process.env.NEXT_PUBLIC_HASURA_SECRET ?? "";
 
-const HEADERS = { "x-hasura-admin-secret": SECRET };
+const HEADERS: Record<string, string> = SECRET ? { "x-hasura-admin-secret": SECRET } : {};
 
 // ── HTTP query ────────────────────────────────────────────────────────────────
 export async function gqlFetch<T>(
